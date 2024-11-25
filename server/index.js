@@ -18,6 +18,16 @@ import User from "./models/User.js";
 import Post from "./models/Post.js";
 import { users, posts } from "./data/index.js";
 
+const cors = requir('cors')
+app.use(cors(
+{
+origin: ["https://deploy-mern-1whq.vercel.app"],
+methods: ["POST", "GET"],
+credentials: true
+}
+));
+
+
 /* CONFIGURATIONS */
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
